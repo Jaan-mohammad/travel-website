@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.5s ease;
 }
 
 /* ##########-- Html element styling--########## */
@@ -80,6 +81,7 @@ h1, h2, h3{
 
 .text-gray{
     color: #555;
+    font-weight: 500;
 }
 
 .bg-dark{
@@ -102,7 +104,9 @@ h1, h2, h3{
     color: #df2535;
 }
 .primary-button:hover{
-    background-color: #edbdbd;
+    background-color: #756565;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .secondary-button{
@@ -114,7 +118,9 @@ h1, h2, h3{
     color: #df2535;
 }
 .secondary-button:hover{
-    background-color: rgb(255, 215, 215);
+    background-color: #af9999;
+    color: #000;
+    transform: scale(1.05);
 }
 
 
@@ -122,7 +128,6 @@ h1, h2, h3{
 img{
     height: 90px;
 }
-
 
 .navbar{
     padding: 1rem;
@@ -157,6 +162,29 @@ img{
 }
 
 
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+
+
 /* ########--Header content styling--######### */
 .header-content h1{
     text-transform: uppercase;
@@ -176,10 +204,9 @@ img{
     background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2));
 }
 
-
 /* ######## SHOWCASE-STYLING ##########-- */
 .showcase{
-    background-color: rgb(117, 101, 101);
+    background-color: #756565;
     padding: 10rem 0;
 }
 
@@ -187,10 +214,7 @@ img{
     height: 350px;
     background-color: #fff;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.377);
-}
-
-.row1{
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .row1 .img-box, .row2 .text-box{
@@ -240,7 +264,14 @@ img{
     float: left;
     padding: 2rem;
     text-align: center;
+    
 }
+
+.features .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
 .box-wrapper::after{
     content: '';
     display: block;
@@ -267,6 +298,13 @@ img{
 }
 .social-media-links i{
     padding: 2rem;
+}
+
+.social-media-links a {
+  color: inherit;
+  text-decoration: none; 
+  display: inline-block;
+  margin: 0 10px;
 }
 
 
@@ -358,6 +396,7 @@ img{
     float: right;
     width: 40%;
     text-align: right;
+    margin-top: 20px;
 }
 
 .about-banner::after{
@@ -383,7 +422,8 @@ img{
     letter-spacing: 0.3rem;
 }
 .banner-btn:hover{
-    background-color: #9e140d;
+    background-color: #5a0e0abe;
+    transform: scale(0.8);
 }
 
 /* ######## CONTACT SECTION STYLING ###########  */
@@ -452,6 +492,7 @@ img{
 .form .form-group input{
     width: 100%;
     padding: 0.5rem;
+    border-radius: 5px;
 }
 
 .form .form-group{
@@ -467,6 +508,7 @@ img{
     width: 100%;
     height: 200px;
     padding: 1rem;
+    border-radius: 5px;
 }
 
 .form-btn{
@@ -480,9 +522,12 @@ img{
     border: none;
     outline: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 .form-btn:hover{
-    background-color: #cf2525;
+    transform: scale(0.95);
+    color: #000;
+    background-color: #685353;
 }
 
 /* ############## MEDIA QUERIES ##############  */
